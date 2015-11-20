@@ -15,6 +15,7 @@ Feature: search for movies by director
 
   Scenario: add director to existing movie
     When I go to the edit page for "Alien"
+    When I fill in "movie_title" with "Men In Black"
     And  I fill in "Director" with "Ridley Scott"
     And  I press "Update Movie Info"
     Then the director of "Alien" should be "Ridley Scott"
